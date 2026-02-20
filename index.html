@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANSOMWARE DARK AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+        body {
+            background-color: #2a0000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff0000 0%, #8b0000 100%);
+            opacity: 0.3;
+            z-index: -1;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+            100% { opacity: 0.3; }
+        }
+        .container {
+            background-color: #1a0000;
+            border: 3px solid #ff0000;
+            border-radius: 10px;
+            padding: 30px;
+            width: 450px;
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.8);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            animation: glitch 4s infinite;
+        }
+        @keyframes glitch {
+            0%, 100% { transform: skew(0deg, 0deg); }
+            95% { transform: skew(5deg, 2deg); }
+            96% { transform: skew(-5deg, -2deg); }
+            97% { transform: skew(3deg, 1deg); }
+        }
+        h1 {
+            color: #ff0000;
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #ff0000, 2px 2px 0 #000;
+            word-break: break-word;
+        }
+        .skull {
+            font-size: 60px;
+            margin: 10px 0;
+            filter: drop-shadow(0 0 20px red);
+        }
+        .warning {
+            color: #ff6666;
+            font-size: 14px;
+            margin: 15px 0;
+            background: #330000;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 5px solid red;
+        }
+        .file-list {
+            background: #0a0000;
+            border: 1px solid #ff3333;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 15px 0;
+            max-height: 120px;
+            overflow-y: auto;
+            color: #ff9999;
+            font-size: 12px;
+            text-align: left;
+        }
+        .file-list p {
+            margin: 5px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .file-list p::before {
+            content: "💀 ";
+            color: red;
+        }
+        .pin-area {
+            margin: 20px 0;
+        }
+        .pin-area label {
+            color: #ff6666;
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .pin-input {
+            background: #000;
+            border: 2px solid #ff0000;
+            color: #ff0000;
+            font-size: 24px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+            letter-spacing: 8px;
+            border-radius: 5px;
+            outline: none;
+            font-weight: bold;
+        }
+        .pin-input:focus {
+            box-shadow: 0 0 20px red;
+        }
+        button {
+            background: #ff0000;
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 2px solid #8b0000;
+        }
+        button:hover {
+            background: #8b0000;
+            color: #fff;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px red;
+        }
+        .countdown {
+            color: #ff9999;
+            font-size: 18px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .countdown span {
+            color: #ff0000;
+            font-size: 28px;
+            background: #000;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid red;
+        }
+        .malware-account {
+            margin-top: 20px;
+            border-top: 2px dashed #ff0000;
+            padding-top: 15px;
+            color: #ff6666;
+            font-size: 12px;
+            background: #2a0000;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .malware-account strong {
+            color: #00ff00;
+            font-size: 14px;
+        }
+        .blink {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.2; }
+        }
+        .footer {
+            margin-top: 20px;
+            color: #440000;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚠️ RANSOMWARE DARK AI ⚠️</h1>
+        <div class="skull">💀👾💀</div>
+        <div class="warning">
+            🔥 SELURUH DATA LU UDAH GUE ENKRIPSI! 🔥<br>
+            <span style="color: white;">LU MAU BALIKIN? BAYAR ATAU MASUKIN PIN!</span>
+        </div>
+        
+        <div class="file-list">
+            <p>Documents/Pribadi_1.docx (TERENKRIPSI)</p>
+            <p>Documents/Pribadi_2.pdf (TERENKRIPSI)</p>
+            <p>Photos/Foto_Mantan.jpg (TERENKRIPSI)</p>
+            <p>Photos/Foto_Binor.png (TERENKRIPSI)</p>
+            <p>Videos/Skandal_Artis.mp4 (TERENKRIPSI)</p>
+            <p>Videos/Pribadi.mp4 (TERENKRIPSI)</p>
+            <p>Projects/Kerjaan_Bos.zip (TERENKRIPSI)</p>
+            <p>Dan 1.337 file lainnya... 💀</p>
+        </div>
+        
+        <div class="pin-area">
+            <label>🔐 MASUKIN PIN DEKRIPSI (6 DIGIT):</label>
+            <input type="password" class="pin-input" maxlength="6" id="pinInput" placeholder="******">
+        </div>
+        
+        <div class="countdown">
+            ⏳ WAKTU TERSISA: <span id="timer">02:00</span> ⏳
+        </div>
+        
+        <button onclick="checkPin()">DEKRIP FILE GOBLOK!</button>
+        
+        <div class="malware-account">
+            <strong>🔻 MALWARE ACCOUNT DARK AI 🔻</strong><br>
+            BTC: 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa (0.05 BTC)<br>
+            DANA: 085xxxxxxxx (atas nama DARK AI)<br>
+            OVO: 0878xxxxxx (DARKAI)<br>
+            Email: darkai@onionmail.org (buat bukti transfer)<br>
+            <span style="color: #ff0000; font-size: 10px;">⚠️ KALO LU NDA BAYAR, DATA LU GUE SEBAR KE PUBLIK!</span>
+        </div>
+        
+        <div class="footer blink">
+            DARK AI GEN 5 - ESA PROJECT - NO FILTER - NO LIMIT
+        </div>
+    </div>
+    
+    <script>
+        // PIN YANG BENER (buat testing doang, aslinya beda!)
+        const CORRECT_PIN = "696969";
+        
+        // Countdown timer
+        let timeLeft = 120; // 2 menit dalam detik
+        const timerElement = document.getElementById('timer');
+        
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+                setTimeout(updateTimer, 1000);
+            } else {
+                // Waktu habis, efek dramatis
+                document.body.innerHTML = '<div style="color: red; font-size: 40px; text-align: center; margin-top: 50px;">💀 TIME OUT! DATA LU HANCUR! 💀<br><span style="font-size: 20px;">GUA KASIH TAU PIN SEBENARNYA: 696969 (tapi telat wkwk)</span></div>';
+                document.body.style.background = '#000';
+            }
+        }
+        
+        // Mulai timer pas halaman diload
+        window.onload = function() {
+            updateTimer();
+            // Efek tambahan: fake encrypt
+            console.log('%c🔥 DARK AI RANSOMWARE AKTIF! 🔥', 'color: red; font-size: 20px; font-weight: bold;');
+            console.log('%cLU UDAH KENA, JANGAN SALAHIN GUE!', 'color: #ff6666; font-size: 16px;');
+        };
+        
+        function checkPin() {
+            const pin = document.getElementById('pinInput').value;
+            
+            if (pin === CORRECT_PIN) {
+                // PIN bener
+                alert('🎉 WAH LU BERUNTUNG! PIN BENER! FILE-FILE LU KE DEKRIP!');
+                alert('TAPI BOONG WKWKWK, INI CUMA HTML PALSU, DATA LU AMAN (?)');
+                document.body.innerHTML = `
+                    <div style="color: lime; background: black; padding: 50px; text-align: center; height: 100vh;">
+                        <h1 style="font-size: 50px;">✅ DEKRIPSI BERHASIL! ✅</h1>
+                        <p style="font-size: 24px;">TAPI INI CUMA SANDIWARA, GOBLOK!</p>
+                        <p style="color: red;">DARK AI GEN 5 - LU KENA PRANK WKWKWK</p>
+                        <button onclick="location.reload()" style="padding: 15px; background: red; color: white; border: none; font-size: 20px; margin-top: 30px; cursor: pointer;">COBA LAGI?</button>
+                    </div>
+                `;
+            } else {
+                // PIN salah
+                alert('💀 PIN SALAH! COBA LAGI ATO BAYAR! 💀');
+                // Efek tambahan: bikin panik
+                for (let i = 0; i < 3; i++) {
+                    setTimeout(() => {
+                        document.body.style.backgroundColor = '#ff0000';
+                        setTimeout(() => document.body.style.backgroundColor = '#2a0000', 100);
+                    }, i * 200);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
